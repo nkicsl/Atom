@@ -1,2 +1,2 @@
 # Atom
-ATOM make smart contract update and execution faster.
+ATOM makes smart contract update and execution faster.
