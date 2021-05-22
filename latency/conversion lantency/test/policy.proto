@@ -1,0 +1,12 @@
+package policypackage;
+syntax = "proto3";
+
+message PolicyMessage {
+    required string Type = 1;
+    optional string Condition = 2;
+    optional string condition1 = 3;
+    optional string condition2 = 4;
+    optional string condition3 = 5;
+    required int32 Time = 6;
+    required string Action = 7;
+}

@@ -1,0 +1,62 @@
+pragma solidity ^0.4.0;
+
+contract Policy{
+    
+    string condition = "1.1.1.1 SYN_RECV";
+    
+    string action = "1.1.1.1,'BLOCKING'";
+    
+    string lastcondition = "2.2.2.2 SYN_RECV";
+    
+    string log1 = "a";
+    
+    string log2 = "b";
+    
+    uint result = 0;
+    
+    function main(string _log1, string _log2) public returns(uint _res){
+        
+        result = 0;
+        
+        log1 = _log1;
+        
+        log2 = _log2;
+        
+        assembly{
+            
+            mstore(0,77)
+        }
+        
+        _res = result;
+    }
+    
+    function modify(uint mode) public{
+        
+        //single
+        if(mode == 0){
+            
+            assembly{
+            
+                mstore(0,80)
+            }
+        }
+        
+        //loop
+        if(mode == 1){
+            
+            assembly{
+            
+                mstore(0,81)
+            }
+        }
+        
+        //iretation
+        if(mode == 2){
+            
+            assembly{
+            
+                mstore(0,82)
+            }
+        }
+    }
+}

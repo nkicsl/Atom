@@ -1,0 +1,20 @@
+PolicyMessage {
+  Type: 'LOOP',
+  Condition: '1.1.1.1 SYN_RECV',
+  Time: 10,
+  Action: "1.1.1.1,'BLOCKING'"
+}
+PolicyMessage {
+  Type: 'SEQU',
+  condition1: '1.1.1.1 SYN_RECV',
+  condition2: '2.2.2.2 SYN_RECV',
+  condition3: '3.3.3.3 SYN_RECV',
+  Time: 10,
+  Action: "1.1.1.1,'BLOCKING'"
+}
+PolicyMessage {
+  Type: 'SINGLE',
+  Condition: '$SRC DEADLOCK',
+  Time: 1,
+  Action: "$SRC, 'OPENING'"
+}

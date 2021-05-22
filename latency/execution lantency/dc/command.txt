@@ -1,0 +1,52 @@
+personal.newAccount('123')
+personal.unlockAccount(eth.accounts[0],"123",0)
+eth.defaultAccount=eth.coinbase
+miner.start()
+miner.stop()
+admin.nodeInfo.enode
+admin.addPeer()
+miner.start();admin.sleepBlocks(1);miner.stop();
+miner.start();admin.sleepBlocks(2);miner.stop();
+miner.start();admin.sleepBlocks(50);miner.stop();
+
+cd go-ethereum/go-ethereum-master/build/bin
+cd go-ethereum-master/go-ethereum-master/build/bin
+./geth --datadir "data" init ./genesis.json
+./geth --lightserv 90 --datadir "data" --networkid 666 --allow-insecure-unlock --nodiscover console --rpc --rpcport 8545 --port 1114 --nodiscover console
+
+sudo lsof -i:端口号
+sudo kill PID号
+------------------------------------------------------
+0xd476c3e8b9ee7c91f2a6aa8f3d6bf053d9b4f03e
+sequContract.at("0xb3a1e3bcc47023af4613ad11a0d3e29c3f61d7f0").check("1.1.1.1 SYN_RECV","2.2.2.2 SYN_RECV")
+------------------------------------------------------
+cc:0xb8c345a49b5a56fc285874f2c3fa40e6d83bc674
+dc:0xdd2aa20c4cc476f0996ef6ca9e24d00b68e6c0b4
+bc:0xd124334bcf1c9ebb4b71cd0b9325b1fb836cd64b
+controllerContract.at("0xb8c345a49b5a56fc285874f2c3fa40e6d83bc674").setBc("0xd124334bcf1c9ebb4b71cd0b9325b1fb836cd64b")
+controllerContract.at("0xb8c345a49b5a56fc285874f2c3fa40e6d83bc674").setDc("0xdd2aa20c4cc476f0996ef6ca9e24d00b68e6c0b4")
+dataContract.at("0xdd2aa20c4cc476f0996ef6ca9e24d00b68e6c0b4").setBc("0xd124334bcf1c9ebb4b71cd0b9325b1fb836cd64b")
+dataContract.at("0xdd2aa20c4cc476f0996ef6ca9e24d00b68e6c0b4").setData("1.1.1.1 SYN_RECV","1.1.1.1 SYN_RECV","1.1.1.1,'BLOCKING'",2)
+dataContract.at("0xdd2aa20c4cc476f0996ef6ca9e24d00b68e6c0b4").getData()
+controllerContract.at("0xb8c345a49b5a56fc285874f2c3fa40e6d83bc674").getData()
+------------------------------------------------------
+eth.getTransaction('0x333e37da46399e68f28bb644c2428d1930216c4efd7874790ac7be7fc5fc6a65')
+eth.getTransactionReceipt('0x21e221d3ac7650341202b68f863148a8a3489b925b61472f3e4669b90446bbda')
+
+single:0x476ee1d3a29ba51a7349ca5e9c4a25b78ab6b6e4
+loop:0xa7acb2c5d90ac927878e02f2228c6a647333fd3f
+iretation:0x9a07cea532b5f5ea24e14c5636b982c72fa6faaa
+-----------------------------------------------------------------------------------------
+P:0x989c8ce417cc05053861ab1f55982644700d0e74
+V1:0xbfc2344b92ab403989b789083d48298678f9d353
+V2:0xa5ef0592df7553643d4dc505a6022d515f8a2919
+
+proxyContract.at("0x989c8ce417cc05053861ab1f55982644700d0e74").upgradeTo("0x476ee1d3a29ba51a7349ca5e9c4a25b78ab6b6e4")
+-----------------------------------------------------------
+0xd42caf686466276005bd93ee826e4c8bbc97575c
+
+policyContract.at("0xd42caf686466276005bd93ee826e4c8bbc97575c").modify(2)
+
+policyContract.at("0xe9e26cfe8834fea270c69d9743f06a55875b55fd").main("1.1.1.1 SYN_RECV","")
+
+eth.getCode("0xe9e26cfe8834fea270c69d9743f06a55875b55fd")

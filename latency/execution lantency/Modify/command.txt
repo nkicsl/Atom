@@ -1,0 +1,29 @@
+personal.newAccount('123')
+personal.unlockAccount(eth.accounts[0],"123",0)
+eth.defaultAccount=eth.coinbase
+miner.start()
+miner.stop()
+admin.nodeInfo.enode
+admin.addPeer()
+miner.start();admin.sleepBlocks(1);miner.stop();
+miner.start();admin.sleepBlocks(2);miner.stop();
+miner.start();admin.sleepBlocks(50);miner.stop();
+
+cd go-ethereum/go-ethereum-master/build/bin
+./geth --datadir "data" init ./genesis.json
+./geth --lightserv 90 --datadir "data" --networkid 666 --allow-insecure-unlock --nodiscover console --rpc --rpcport 8545 --port 1114 --nodiscover console
+
+sudo lsof -i:端口号
+sudo kill PID号
+------------------------------------------------------
+"0xa5ef6edd0b1aeb92b22d9bc74d65bf18bd10bbcf"
+
+P:0x6adf216b2d772c06a135d02dacc37d6c8b088da2
+V1:0x42a5e2e3b14326ca239b514afc1ae3c0116f54ab
+V2:0x9172fd301187768ae48319448da57031cb840f8b
+
+proxyContract.at("0x6adf216b2d772c06a135d02dacc37d6c8b088da2").upgradeTo("0x42a5e2e3b14326ca239b514afc1ae3c0116f54ab")
+
+proxyContract.at("0x6adf216b2d772c06a135d02dacc37d6c8b088da2").upgradeTo("0x9172fd301187768ae48319448da57031cb840f8b")
+
+proxyContract.at("0x6adf216b2d772c06a135d02dacc37d6c8b088da2").implementation()
